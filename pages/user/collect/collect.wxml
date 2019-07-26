@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="step_group">
+      <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #009241 solid;color:#009241;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+    </view>
+    <view>
+      <view wx:if="{{orderAttr == 0}}">
+        <!--商品展示开始-->
+        <view class="goods">
+          <view wx:for="{{collect}}" wx:for-item="dormitory" wx:key="id" class="goods_show_box-3">
+            <view class="goods_box">
+              <navigator url="../../goods/goods?id={{dormitory.id}}" hover-class="navigator-hover">
+                <view class="img_box">
+                  <image class="goods_image" src="{{dormitory.smallImage}}"></image>
+                </view>
+                <view class="text_box">
+                  <view class="goods_name">{{dormitory.dormitoryName}}</view>
+                  <view class="goods_desc">
+                    <view class='priceBox'><view class="goods_price ">￥{{dormitory.price}}</view>万</view> 
+                    <view class="goods_sell_number">{{dormitory.roomType}}</view>
+                    <view class="goods_sell_number">{{dormitory.area}}㎡</view>
+                  </view>
+                  <view class='red'><view class='iconfont icon-chengjiaokehu shouyiIcons'></view>预计收益：￥{{dormitory.profit}}</view>
+                  <view class='addr'>发布时间：￥{{dormitory.publishTime}}</view>                  
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>         
+        <view class='text-center' wx:if="{{collect.length == 0}}">
+          <view>
+            <image class="cartImg" src="../../../images/NoCollection.png"></image>                   
+          </view>
+          <text class='f30'>暂无收藏</text>
+        </view>
+        <!--商品展示结束-->
+      </view>      
+      <view wx:if="{{orderAttr == 1}}">
+        <!--商品展示开始-->
+        <view class="goods">
+          <view wx:for="{{collectRentList}}" wx:for-item="dormitory" wx:key="id" class="goods_show_box-3">
+            <view class="goods_box">
+              <navigator url="../../goods/goods?id={{dormitory.id}}" hover-class="navigator-hover">
+                <view class="img_box">
+                  <image class="goods_image" src="{{dormitory.smallImage}}"></image>
+                </view>
+                <view class="text_box">
+                  <view class="goods_name">{{dormitory.dormitoryName}}</view>
+                  <view class="goods_desc">
+                    <view class='priceBox'><view class="goods_price ">￥{{dormitory.price}}</view>元/月</view> 
+                    <view class="goods_sell_number">{{dormitory.roomType}}</view>
+                    <view class="goods_sell_number">{{dormitory.area}}㎡</view>
+                  </view>
+                  <view class='red'><view class='iconfont icon-chengjiaokehu shouyiIcons'></view>预计收益：￥{{dormitory.profit}}</view>
+                  <view class='addr'>发布时间：￥{{dormitory.publishTime}}</view>                  
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        <view class='text-center' wx:if="{{collectRentList.length == 0}}">
+          <view>
+            <image class="cartImg" src="../../../images/NoCollection.png"></image>  
+          </view>
+          <text class='f30'>暂无收藏</text>
+        </view>
+        <!--商品展示结束-->
+        
+     </view> 
+    </view>
+</view>

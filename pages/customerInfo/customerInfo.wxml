@@ -1,0 +1,48 @@
+<view style="margin-top:20rpx;">
+  <view class='boxReg'>
+  <view class="bottomLine">
+      <view class='label_name'>真实姓名</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" bindinput="name" class="input" value="{{customer.name}}"></input>
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>手机号</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="mobile" class="input" value="{{customer.mobile}}"></input>
+      </view>
+    </view> 
+    <view class="bottomLine">
+      <view class='label_name'>微信号</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" bindinput="wxNumber" class="input" value="{{customer.wxNumber}}"></input>
+      </view>
+    </view> 
+    <view class="bottomLine">
+      <view class='label_name'>有几套房</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" bindinput="houseNumber" class="input" value="{{customer.houseNumber}}"></input>
+      </view>
+    </view>    
+    <view class="bottomLine">
+      <view class='label_name'>年龄</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="age" class="input" value="{{customer.age}}"></input>
+      </view>
+    </view> 
+    <view class="bottomLine">
+      <view class='label_name'>客户类型</view>
+      <view class='inputBox'>
+        <picker bindchange="important" value="" range="{{importantArray}}">
+            <view>
+            <view class='iconfont icon-yonghuxinxi right-arrow'></view>
+              <text>{{importantArray[customer.important]}}</text>
+            </view>
+          </picker>
+      </view>
+    </view>
+  </view>
+  <view class='btnBox'>
+    <button type="primary" class='regBtn float-right' size="{{primarySize}}" hover-class="other-button-hover " bindtap='onRegister'>提交</button>
+  </view>
+</view>

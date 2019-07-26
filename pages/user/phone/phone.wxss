@@ -1,0 +1,36 @@
+@import "../../common/topinput/topinput";
+.weixin_icons {
+  font-size: 46rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.loginImg {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 550rpx;
+  font-size: 60rpx;
+  padding-top: 260rpx;
+}
+
+.loginImg image {
+  width: 427rpx;
+  height: 132rpx;
+}
+
+.yzm{
+  position: absolute;right: 50rpx;
+}
+.yzm button{
+  font-size:28rpx;
+  border:none;
+  background:none;
+  z-index:1;
+  height:60rpx;
+  line-height:60rpx;
+  margin-top:10rpx;
+  width: 220rpx;
+}
+.w100{
+  width: 360rpx;
+}

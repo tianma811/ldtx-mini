@@ -1,0 +1,27 @@
+<view class='incomeBox'>
+  <view class='Mtitle'>2019-2-1</view>
+  <view>业主手机尾号*******6501</view>
+  <view>成功购买了【玫瑰公馆二期商铺】</view>
+  <view>商铺编号为【NFS01457878】</view>
+  <view>经纪人：王小帅</view>
+  <view class='income'>成交收益：￥1500</view>
+</view>
+<view class='incomeBox'>
+  <view class='Mtitle'>2019-2-1</view>
+  <view>业主手机尾号*******6501</view>
+  <view>成功购买了【玫瑰公馆二期商铺】</view>
+  <view>商铺编号为【NFS01457878】</view>
+  <view>经纪人：王小帅</view>
+  <view class='income'>成交收益：￥1500</view>
+</view>
+
+<view class='fudong'>
+  <view class="widget-goTop " wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu litt'></view>
+  </view>
+  <view class="addHomeBox">
+    <navigator url="../../user/follow_add/follow_add">
+      <view class='addHome'>添加跟进</view>
+    </navigator>
+  </view>
+</view>

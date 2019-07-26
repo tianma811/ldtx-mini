@@ -1,0 +1,20 @@
+<view style="margin-top:20rpx;">
+  <view class='boxReg'>   
+    <view class="bottomLine">
+      <view class='label_name'>手机号</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="请输入业主手机号"></input>
+      </view>
+    </view>
+     <view>    
+      <view style='margin:20rpx;'>
+        <textarea placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="请输入内容"></textarea>
+      </view>
+    </view>    
+  </view>
+  <view class='btnBox'>
+  <navigator url="../follow/follow">
+    <button type="primary" class='regBtn float-right' size="{{primarySize}}" hover-class="other-button-hover " bindtap='onRegister'>提交</button>
+  </navigator>  
+  </view>
+</view>

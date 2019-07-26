@@ -1,0 +1,25 @@
+/* input输入框 */
+
+.inputtop {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 499;
+  font-size: 34rpx;
+  height: 70rpx;
+  top: 0;
+}
+
+.scroll {
+  margin-top: 65rpx;
+}
+.inputtop button{
+  border:none;position: absolute;background: none;right:10px; height: 30px; line-height: 30px;
+}
+.inputtop button::after{
+  border:none;
+  background: none;
+}
+.headerKefu{
+  font-size: 48rpx;
+}

@@ -1,0 +1,14 @@
+<view class='inputtop'>
+<button open-type="contact" hidden="{{formtype}}">
+<view class='iconfont icon-kefu headerKefu'></view>
+</button>
+  <input type='search' placeholder-class="place-holder" placeholder='请输入关键词' class='topinput' bindinput="searchtopInput" bindconfirm="searchtop" confirm-type="search" value='{{searchtop}}'></input>
+   <view class='iconfont icon-49 search' bindtap="searchtop"></view> 
+  <!-- <button open-type="contact" style='height:auto;line-height:60rpx' hidden="{{formtype}}">
+    <view class='iconfont '></view>
+  </button> -->
+  <!-- <view class='iconfont {{iconsimg[iconsindex-1].img}} fenlei' bindtap="icons" hidden="{{!formtype}}"></view> -->
+  <!-- <view class='iconfont icon-xiaoxi1 sao' bindtap="sao" bindtap="scancode" hidden="{{formtype2}}"></view> -->
+  <!-- <image src='{{imgurl}}cat-all/groip_icon_return.png' class='arrow' bindtap="goback" hidden="{{!formtype2}}"></image> -->
+  <!-- <view class='iconfont icon-gengduo1 arrow' bindtap="sao" bindtap="goback" hidden="{{!formtype2}}"></view> -->
+</view>

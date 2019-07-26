@@ -1,0 +1,12 @@
+@import "../common/topinput/topinput";
+.centerText { padding: 20rpx;}
+.important{
+  background:#009241;
+color:#fff;
+display:inline-block;
+font-size:22rpx;
+padding:5rpx 20rpx;
+border-radius:10rpx;
+float:right;
+margin-right: 10rpx;
+}

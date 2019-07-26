@@ -1,0 +1,86 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx00e4f91b69c15cf2",
+	"projectname": "pudaye-master",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "物流画面调试",
+					"pathName": "pages/user/logistics/logistics",
+					"query": "id=5154",
+					"scene": "1037",
+					"referrerInfo": {
+						"extraData": "{\"id\":\"5\"}"
+					}
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "邦定手机",
+					"pathName": "pages/user/phone/phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "登录页面",
+					"pathName": "pages/user/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "扫描房源分享二维码",
+					"pathName": "pages/index/index",
+					"query": "scene=FY00017-WC00008",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "扫描经纪人名片二维码进入首页",
+					"pathName": "pages/index/index",
+					"query": "scene=13f67d87dbfd4131ab6e12acf6aeba6b",
+					"scene": 1011
+				}
+			]
+		}
+	}
+}

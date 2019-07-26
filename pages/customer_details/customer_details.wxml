@@ -1,0 +1,63 @@
+<scroll-view class="container" scroll-y="true" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view>
+    <view class='content'>
+      <view style="width:100%;heigth:100%;">
+        <!--客户列表-->
+        <view class="goods">
+          <view class="user_list_box">
+            <navigator url="../customerInfo/customerInfo?id={{customerInfo.id}}">
+              <view class="img_box">
+                <image class="goods_image" src="{{customerInfo.headimgurl}}"></image>
+              </view>
+              <view class="text_box">
+                <view class="important" wx:if="{{customerInfo.important=='1'}}">重点客户</view>
+                <view class="goods_name">{{customerInfo.name}}</view>
+                <!-- <view class="goods_desc">分销员编号：F0001</view> -->
+                <view class='addr'>来源：{{customerInfo.source}}</view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+
+      <view class="step_group">
+    <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #009241 solid;color:#009241;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+  </view>
+  <view class='content'>
+    <view wx:if="{{orderAttr == 0}}" class='centerText'>
+      <view wx:for="{{followUpList}}" wx:for-item="followUp" class='contentDetailed'>
+        <view class='Mtitle'>{{followUp.createDate}}</view>
+        <view>{{followUp.content}}</view>
+      </view>
+      <view class='text-center' wx:if="{{followUpList.length == 0}}">
+          <view>
+            <image class="cartImg" src="../../../images/NoContent.png"></image>
+          </view>
+          <text class='f30'>暂无数据</text>
+        </view>
+    </view>
+    <view wx:if="{{orderAttr == 1}}" class='centerText'>
+      <view wx:for="{{dealList}}" wx:for-item="followUp" class='contentDetailed'>
+        <view class='Mtitle'>{{followUp.createDate}}</view>
+        <view>{{followUp.content}}</view>
+      </view>
+        <view class='text-center' wx:if="{{dealList.length == 0}}">
+          <view>
+            <image class="cartImg" src="../../../images/NoContent.png"></image>
+          </view>
+          <text class='f30'>暂无数据</text>
+        </view>
+      </view>
+  </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- <view class='fudong'>
+  <view class="addHomeBox">
+    <navigator url="../news/news_add/news_add">
+      <view class='addHome'>立即留言</view>
+    </navigator>
+  </view>
+</view> -->

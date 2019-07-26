@@ -1,0 +1,24 @@
+<view style="overflow:hidden;height:1200rpx;">
+<image style="width:100%;height:100%;position: absolute;z-index: -111;" src="../../../images/loginBg.jpg" />
+  <form bindsubmit="bindTelephone" report-submit="true">
+   <view class="loginImg">
+    <image src="../../../images/logo1.png"></image>
+  </view>
+  <view class='boxWhite'>
+    <view class="bottomLine">
+      <input placeholder="手机号" bindinput='mobile' />
+    </view>
+    <view>
+      <view class='yzm'>
+        <button wx:if="{{!isSend}}" bindtap='sendvalid'>发送验证码</button>
+        <button wx:if="{{isSend}}">{{remainSeconds}}S</button>
+      </view>
+      <input class='w100' placeholder="请输入验证码" bindinput='validcode' password />
+    </view>
+  </view>
+  <view class='btnBox' style=" padding-top:0rpx;">
+     <button type="primary" class='wxBtn' form-type="submit" hover-class="other-button-hover">
+      立即绑定</button>
+  </view>
+  </form>
+</view>

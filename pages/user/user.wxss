@@ -1,0 +1,160 @@
+@import "../common/topinput/topinput";
+
+page {
+  font-size: 28rpx;
+}
+
+.tem04-imgb {
+  display: inline-block;
+  color: #000;
+  margin-bottom: 0rpx;
+  vertical-align: middle;
+  background: #f0f0f0;
+  border-radius: 100%;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  font-weight: bold;
+}
+
+.con-text {
+  background-color: white;
+  margin-top: -21rpx;
+  line-height: 17rpx;
+}
+
+.userMenu_group {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.userMenu_box {
+  width: 100%;
+  color: #000;
+  font-family: "Microsoft YaHei";
+  line-height: 90rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.slide-image {
+  width: 100%;
+  height: 450rpx;
+  position: absolute;
+  z-index: -1;
+  margin-top: 60rpx;
+}
+
+.slide-image-text {
+  display: block;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  text-align: left;
+  margin-left: 20rpx;
+  width: 400rpx;
+}
+
+/* .h220 {
+  height: 240rpx;
+} */
+
+.touimage {
+  overflow: hidden;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 40rpx;
+}
+
+.reddot {
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 30rpx;
+  background: white;
+  text-align: center;
+  vertical-align: middle;
+  color: #009241;
+  line-height: 30rpx;
+  font-size: 21rpx;
+  border-color: #009241;
+  border-style: solid;
+  border-width: 2rpx;
+  top: -130rpx;
+  right: -95rpx;
+}
+
+.h220 {
+  height: 450rpx;
+  /* border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%; *//* background-image: -webkit-gradient(linear,left top,right top,from(#2a9d3d),to(#009241));
+  background-image: linear-gradient(90deg,#2a9d3d,#009241); *//* background: #009241;
+  background: -webkit-linear-gradient(left,#2a9d3d,#009241); */
+}
+
+.userBg {
+  background: #fff;
+  padding-bottom: 35rpx;
+  margin: 195rpx 50rpx 50rpx 50rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  width: 655rpx;
+  box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
+  padding-top: 75rpx;
+}
+
+.h100 {
+  height: 100rpx;
+}
+
+.state {
+  font-size: 24rpx;
+  color: #009241;
+  text-align: left;
+  line-height: 45rpx;
+}
+
+.state text {
+  display: block;
+  height: 40rpx;
+}
+
+.userText {
+  margin-left: 200rpx;
+}
+
+.MemberID {
+  font-size: 26rpx;
+  text-indent: 20rpx;
+  color: #333;
+}
+
+.phone {
+  display: inline-block;
+  font-size: 22rpx;
+  border-radius: 50rpx;
+  padding: 5rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #009241;
+  background: -webkit-linear-gradient(left, #2a9d3d, #009241);
+  color: #fff;
+}

@@ -1,0 +1,58 @@
+<scroll-view class="container" scroll-y="true" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view>   
+    <view class="step_group">
+      <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #009241 solid;color:#009241;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+    </view>
+    <view>
+      <view wx:if="{{orderAttr == 0}}">
+        <!--客户列表开始-->
+        <view class="goods" wx:for="{{importantCustomerList}}" wx:for-item="customer" wx:key="id">
+          <view class="user_list_box">
+            <navigator url="../customer_details/customer_details?id={{customer.id}}" hover-class="navigator-hover">
+              <view class="img_box">
+                <image class="goods_image" src="{{customer.headimgurl}}"></image>
+              </view>
+              <view class="text_box">
+                <view class="goods_name">{{customer.name}}</view>
+                <!-- <view class="goods_desc">分销员编号：F0001</view> -->
+                <view class='addr'>来源：{{customer.source}}</view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+        <view class='text-center' wx:if='{{importantCustomerList.length==0}}'>
+          <view>
+            <image class="cartImg" src="../../../images/NoContent.png"></image>
+            
+          </view>
+          <text class='f30'>暂无数据</text>
+        </view>
+        <!--团队列表结束-->
+      </view>
+      <view wx:if="{{orderAttr == 1}}" class='centerText'>
+        <!--客户列表开始-->
+        <view class="goods" wx:for="{{customerList}}" wx:for-item="customer" wx:key="id">
+          <view class="user_list_box">
+            <navigator url="../customer_details/customer_details?id={{customer.id}}" hover-class="navigator-hover">
+              <view class="img_box">
+                <image class="goods_image" src="{{customer.headimgurl}}"></image>
+              </view>
+              <view class="text_box">
+                <view class="goods_name">{{customer.name}}</view>
+                <!-- <view class="goods_desc">分销员编号：F0001</view> -->
+                <view class='addr'>来源：{{customer.source}}</view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+        <view class='text-center' wx:if='{{customerList.length==0}}'>
+          <view>
+            <image class="cartImg" src="../../images/NoContent.png"></image>
+          </view>
+          <text class='f30'>暂无数据</text>
+        </view>
+        <!--团队列表结束-->
+      </view>
+    </view>
+  </view>
+</scroll-view>

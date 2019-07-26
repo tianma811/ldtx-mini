@@ -1,0 +1,135 @@
+<scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view class='con'>
+    <view class='xq_banner'>
+      <swiper indicator-dots="true" autoplay="true" class='xq_banner'>
+        <swiper-item wx:for="{{lunboImgs}}" wx:for-item="item" wx:key="id">
+          <image height="500" class="goods_image2 goods_detail_big" data-preimg=".goods_detail_big" data-src="{{item}}" bindtap="viewImg" src="{{item}}" />
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class='title'>{{dormitory.dormitoryName}}</view>
+  </view>
+  <view class='module'>
+    <view class='jiage'>
+      <text>售价</text>
+      <text class='price'>{{dormitory.price}}{{dormitory.type=='1'?'万':'元/月'}}</text>
+    </view>
+    <view class='shouyi' hidden='{{(logininfo.userType=="1"||logininfo.userType=="2")?false:true}}'>
+      <text>预计收益</text>
+      <text class='price' >￥{{dormitory.profit}}</text>
+    </view>
+    <view class='d1'>
+      <view>房源编号：
+        <text>{{dormitory.dormitoryId}}</text>
+      </view>
+      <view>门店名称：
+        <text>{{dormitory.shopName}}</text>
+      </view>
+      <view>经纪人：
+        <text>{{dormitory.agentName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='module'>
+    <view class='d2'>
+      <view>面积：
+        <text>{{dormitory.area}}㎡</text>
+      </view>
+      <view>户型：
+        <text>{{dormitory.roomType}}</text>
+      </view>
+      <view>楼号：
+        <text>{{dormitory.dormitoryNumber}}</text>
+      </view>     
+    </view>
+    <view class='d1'>
+     <view>发布时间：
+        <text>{{dormitory.publishTime}}</text>
+      </view>    
+    </view>
+  </view>
+  <view class='module'>
+    <view class='Mtitle'>楼盘信息 </view>
+    <view class='d2'>
+      <view>开发商
+        <text>{{dormitory.developers}}</text>
+      </view>
+      <view>容积率
+        <text>{{dormitory.volumeRatio}}</text>
+      </view>
+    </view>
+    <view class='d2'>
+      <view>物业
+        <text>{{dormitory.property}}</text>
+      </view>
+      <view>车位比
+        <text>{{dormitory.parkingSpaceRatio}}</text>
+      </view>
+    </view>
+    <view class='d1'>
+      <view>配套设施
+        <text>:{{dormitory.supportingFacilities}}</text>
+      </view>
+        <view>
+        楼盘地址：
+        <view class='iconfont icon-xiangyou1 right_arrow' style="margin-top:50rpx;"></view>
+        <navigator style="color:#000;" url="../map/map?longitude={{lng}}&latitude={{lat}}&name={{dormitoryName}}" hover-class="navigator-hover">
+          {{dormitory.address}}
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='module' hidden='{{(logininfo.userType=="1"||logininfo.userType=="2")?false:true}}'>
+    <view class='more' bindtap="followUpMore">
+      查看更多
+    </view>
+    <view class='Mtitle'>跟进记录
+    </view>
+    <!-- <text>手机尾号5214用户查看你您的房源</text> -->
+  </view>
+  <view class='iconfont icon-kefu kefu' bindtap="icons" hidden="{{!formtype}}"></view>
+  <!-- 底部输入框及文字 -->
+  <view style="height:100rpx;"></view>
+
+  <!-- 详情底部 -->
+  <view class='bottomcar'>
+    <view class='bottomcar-home home-home' bindtap='collect'>
+      <view class='share'>
+        <view class='iconfont {{isCollect=="1"?"icon-shoucangsel":"icon-shoucang"}} img-bot'></view>
+        <view>收藏</view>
+      </view>
+    </view>
+    <view class='bottomcar-home'>
+      <view bindtap="call">
+        <view class='iconfont icon-dianhua img-bot' ></view>
+        <view class="{{ tabItem.color}}">项目经理</view>
+      </view>
+    </view>
+    <view class='bottomcar-buy now-in' hidden='{{(logininfo.userType=="1"||logininfo.userType=="2")?false:true}}'>
+      <button class='now-in' style='color:white' bindtap='shareQrcode'>分享二维码</button>
+    </view>
+  </view>
+</scroll-view>
+<view class='fudong' hidden='{{logininfo.userType=="1"}}'>
+  <view class="widget-goTop" wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu litt'></view>
+  </view>
+  <navigator url='../news/news_details/news_details?receiver={{dormitory.agentOpenid}}'>
+    <button class='iconfont icon-kefu litt bot-kefu'></button>
+  </navigator>
+  
+</view>
+
+<modal hidden="{{hidden}}" title="确认信息" confirm-text="是" cancel-text="否" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+    是否需要经纪人推荐更多房源？
+</modal>
+
+<view class="float" hidden='{{viewShowed}}'>
+  <view class='floatContent'>
+  <text>允许授权获取手机号</text>
+    <view class='floatText'>
+      <button  bindtap='cancle' class='btn-cancle'>取消</button>
+    <button  class='btn-cancle' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">确认</button>
+    </view>
+  </view>
+</view>

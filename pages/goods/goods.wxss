@@ -1,0 +1,197 @@
+@import "../common/topinput/topinput";
+
+.swiper {
+  height: 750rpx;
+}
+
+.cont {
+  margin-top: 20rpx;
+}
+
+/* 名称及编码 */
+
+.s20 {
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+
+.jiage {
+  margin-right: 11px;
+  float: right;
+  color: #e4583f;
+}
+
+.shouyi {
+  position: absolute;
+  right: 40rpx;
+  margin-top: 80rpx;
+  background: #e4583f;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  padding: 10rpx;
+}
+
+.jiage text {
+  display: inline-block;
+}
+
+.jiage text.price {
+  color: #f00;
+  font-size: 50rpx;
+}
+
+.module {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+
+.module .xqprice {
+  font-size: 60rpx;
+  color: #f00;
+}
+
+.module .xqprice text {
+  font-size: 24rpx;
+}
+
+.module .more {
+  font-size: 30rpx;
+  float: right;
+  position: absolute;
+  right: 20rpx;
+  margin-top: 10rpx;
+}
+
+.module .Mtitle {
+  text-align: left;
+  font-size: 38rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 55rpx;
+  font-weight: bold;
+  word-spacing: 10rpx;
+  background-color: white;
+  padding-bottom: 25rpx;
+  -webkit-box-orient: vertical;
+  padding: 0rpx;
+  height: 70rpx;
+}
+
+.houseBox {
+  display: flex;
+  white-space: nowrap;
+}
+
+.hxPrice {
+  float: right;
+  color: #f00;
+}
+
+.d2 view {
+  width: 350rpx;
+  display: inline-block;
+  color: #999;
+  line-height: 50rpx;
+}
+
+.d2 view text {
+  color: #000;
+}
+
+.d1 {
+  color: #999;
+  line-height: 50rpx;
+}
+
+.d1 text {
+  color: #000;
+}
+
+.title {
+  text-align: left;
+  font-size: 38rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 55rpx;
+  font-weight: bold;
+  word-spacing: 10rpx;
+  background-color: white;
+  padding-bottom: 25rpx;
+  padding: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.shoucangActive {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 15rpx;
+  right: 10rpx;
+  text-align: center;
+  border-radius: 41rpx;
+  background-color: #009241;
+}
+
+.share button {
+  background: #fff;
+  border: none;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  position: inherit;
+}
+
+.float {  
+  height: 100%;  
+  width: 100%;  
+  position: fixed; 
+  background-color: rgba(0, 0, 0, 0.5);  
+  z-index: 2;  
+  top: 0;  
+  left: 0;
+}
+.floatContent {  
+  /* padding: 20rpx 0;   */
+  width: 80%;  
+  background: #fff;  
+  margin: 40% auto;  
+  border-radius: 20rpx;  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: space-around;  
+  align-items: center;  
+  position: relative;  
+  height: 255rpx;
+}
+.floatContent text {  
+  color: #000;  
+  font-size: 40rpx;  
+  display: block;  
+  margin: 0 auto;
+  position: absolute;
+  top: 50rpx;
+  /* text-align: center;   */
+  /* line-height: 60rpx;   */
+  border-radius: 30rpx;  
+}
+.floatText{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+}
+
+.btn-cancle{
+  line-height: 100rpx;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border-radius: none;
+}

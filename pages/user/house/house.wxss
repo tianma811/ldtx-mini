@@ -1,0 +1,23 @@
+@import "../../common/topinput/topinput";
+.house_group{
+  flex-direction:row;
+  background-color:#fff;
+  z-index:10000000;
+  margin-top:60rpx;
+  height: 70rpx;
+  padding: 10rpx;
+  text-align:center;
+  
+}
+.house_group view{
+  width: 200rpx;
+  display: inline-block;
+  line-height: 60rpx;  
+  text-align: center;
+  border:1px solid #f0f0f0;
+  margin: 15rpx;
+}
+.house_group view.cur{
+  background: #009241;
+  color: #fff;
+} 

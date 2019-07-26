@@ -1,0 +1,41 @@
+<view>
+  <view class="step_group">
+    <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #009241 solid;color:#009241;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+  </view>
+  <view class='content'>
+    <view wx:if="{{orderAttr == 0}}" class='centerText'>
+      <view wx:for="{{followUpList}}" wx:for-item="followUp" class='contentDetailed'>
+        <view class='Mtitle'>{{followUp.createDate}}</view>
+        <view>{{followUp.content}}</view>
+      </view>
+      <view class='text-center' wx:if="{{followUpList.length == 0}}">
+        <view>
+          <image class="cartImg" src="../../../images/NoContent.png"></image>
+        </view>
+        <text class='f30'>暂无数据</text>
+      </view>
+    </view>
+    <view wx:if="{{orderAttr == 1}}" class='centerText'>
+      <view wx:for="{{dealList}}" wx:for-item="followUp" class='contentDetailed'>
+        <view class='Mtitle'>{{followUp.createDate}}</view>
+        <view>{{followUp.content}}</view>
+      </view>
+      <view class='text-center' wx:if="{{dealList.length == 0}}">
+        <view>
+          <image class="cartImg" src="../../../images/NoContent.png"></image>
+        </view>
+        <text class='f30'>暂无数据</text>
+      </view>
+    </view>
+  </view>
+  <view class='fudong' hidden='{{(logininfo.userType=="1"||logininfo.userType=="2")?false:true}}'>
+    <view class="widget-goTop " wx:if="{{floorstatus}}" bindtap="goTop">
+      <view class='iconfont icon-huidingbu litt'></view>
+    </view>
+    <view class="addHomeBox" bindtap="addFollowUp">
+        <view class='addHome'>添加跟进</view>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,33 @@
+var window = (function () {
+  return this
+})();
+var app = getApp()
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    stepList: ["跟进信息", "成交信息"],
+    orderAttr: 0,
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    let preData = window.getCurrentPages()[window.getCurrentPages().length - 2].data;
+    let data = {};
+    for (key in preData) {
+      data[key] = preData[key]
+    }
+    this.setData(data);
+    wx.setNavigationBarTitle({
+      title: this.data.dormitoryName
+    })
+  },
+  tabClick: function (e) {
+    this.setData({
+      orderAttr: e.target.dataset.index
+    })
+  }
+})

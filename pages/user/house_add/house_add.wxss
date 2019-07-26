@@ -1,0 +1,28 @@
+.inputBox view.uploadbox {
+  border: 1px solid #f0f0f0;
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 50rpx;
+  margin: 20rpx 0px 20rpx 0rpx;
+  vertical-align: middle;
+}
+
+picker {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.inputBox view {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.inputBox view.uploadImg {
+  width: 120rpx !important;
+  height: 120rpx;
+  margin: 20rpx;
+  vertical-align: middle;
+}

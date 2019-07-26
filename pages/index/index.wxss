@@ -1,0 +1,17 @@
+@import "../common/topinput/topinput";
+
+.banner {
+  margin-top: 85rpx;
+  text-align: center;
+}
+
+.banner image {
+  width: 690rpx;
+  height: 375rpx;
+  margin: 0px auto;
+  border-radius: 10rpx;
+}
+
+.goods_desc view {
+  display: inline-block;
+}

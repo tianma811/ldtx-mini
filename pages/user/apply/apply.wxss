@@ -1,0 +1,20 @@
+/* pages/user/apply/apply.wxss */
+.incomeBox{
+  background: #fff;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+.incomeBox .Mtitle{
+  border-bottom:1px dotted #ccc;
+  margin-bottom: 10rpx;
+}
+.incomeBox view{
+  line-height: 50rpx;
+}
+.income {
+  font-size:28rpx;
+  border-top:1px dotted #ccc;
+  color:#f00;
+  line-height:60rpx;
+  margin-top:20rpx;
+}

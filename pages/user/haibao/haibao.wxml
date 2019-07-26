@@ -1,0 +1,10 @@
+<view class="page-body">
+  <view>
+    <image style="width:100%;height:100vh" bindlongtap='saveImage'
+              src="{{imgPath}}" />
+    <!-- <view class="qrcode"> -->
+    <!-- <image style="width:100%;height:100%;border-radius:50%;"
+              src="{{imgPath}}" />
+    </view> -->
+  </view>
+</view>

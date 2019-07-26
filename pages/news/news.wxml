@@ -1,0 +1,31 @@
+<scroll-view class="container" scroll-y="true" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view>
+    <view class='content'>
+        <!--客户列表开始-->
+        <view class="goods" wx:for="{{chatList}}" wx:for-item="chat">
+          <view class="user_list_box">
+              <navigator url="news_details/news_details?chatId={{chat.id}}&receiver={{chat.receiver}}">
+                <view class="img_box">
+                  <image class="goods_image" src="{{chat.headimgurl}}"></image>
+                </view>
+                <view class="text_box">
+                  <view class='date'>{{chat.latestTime}}</view>
+                  <view class="goods_name">{{chat.nickname}}</view>
+                  <view class="goods_desc">{{chat.latestMessage}}</view>                  
+                </view>
+              </navigator>
+          </view>
+        </view>
+        <!--客户列表结束-->
+        <view hidden='{{chatList.length>0}}' class='text-center'>
+          <view>
+            <image class="cartImg" src="../../../images/NoMessage.png"></image>
+          </view>
+          <text class='f30'>暂无内容</text>
+        </view>
+    </view>
+<view>
+</view>
+  </view>
+
+</scroll-view>

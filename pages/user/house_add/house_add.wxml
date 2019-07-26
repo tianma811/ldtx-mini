@@ -1,0 +1,113 @@
+<view style="margin-top:20rpx;">
+  <view class='boxReg'>
+  <view class="bottomLine">
+      <view class='label_name'>类型</view>
+      <view class='iconfont icon-xiangyou1 right_arrow'></view>
+      <view class='inputBox'>       
+        <picker bindchange="type" value="{{index}}" range="{{types}}">
+          <view class="picker">
+            {{types[index]}}
+          </view>
+        </picker>
+      </view>       
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>上传图片</view>
+      <view class='inputBox'>      
+        <image wx:for="{{localImagePath}}" wx:for-item='item' wx:key="item" class='uploadImg' src="{{item}}"></image>
+        <view class='uploadbox' bindtap="upload">+</view>
+      </view>
+    </view>
+     </view>
+     <view class='boxReg'>
+     <view class="bottomLine">
+      <view class='label_name'>楼盘字典</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="text" bindinput="searchBuilding" class="input" placeholder="请输入楼盘关键字" value="{{dormitoryName}}"></input>
+        <scroll-view scroll-y="true" class="scrollview" hidden="{{hideScroll}}" style="{{arrayHeight>340?'height:340rpx':''}}">
+  <view wx:for="{{bindSource}}">
+    <view id="{{item.id}}" bindtap="itemtap" class="itemview">{{item.buildingName}}</view>
+  </view>
+</scroll-view>
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>楼盘地址</view>
+      <view class='inputBox' style='height:80rpx;line-height:80rpx;'>
+        <view class="input">{{address}}</view>
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>楼号</view>
+      <view class='inputBox'>
+        <view class="input">{{dormitoryNumber}}</view>
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>单元号</view>
+      <view class='inputBox'>
+        <view class="input">{{unitNumber}}</view>
+      </view>
+    </view>
+     <view class="bottomLine">
+      <view class='label_name'>房号</view>
+      <view class='inputBox'>
+        <view class="input">{{roomNumber}}</view>
+      </view>
+    </view> 
+     </view>
+     <view class='boxReg'>
+    <view class="bottomLine">
+      <view class='label_name'>面积</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="digit" maxlength="11" bindinput="area" class="input" placeholder="请输入面积"></input>
+      </view>
+    </view> 
+    <view class="bottomLine">
+      <view class='label_name'>价格</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="digit" maxlength="11" bindinput="price" class="input" placeholder="请输入价格"></input>
+      </view>
+    </view> 
+   
+    <view class="bottomLine">
+      <view class='label_name'>户型</view>
+      <view class='iconfont icon-xiangyou1 right_arrow'></view>
+      <view class='inputBox'>
+        <picker bindchange="roomType" value="{{huxingIndex}}" range="{{huxing}}">
+          <view class="picker">
+            {{huxing[huxingIndex]}}
+          </view>
+        </picker>
+
+        <!-- <input placeholder-class="input-holder" type="text" bindinput="roomType" class="input" placeholder="请选择户型"></input> -->
+      </view>
+    </view> 
+    <!-- <view class="bottomLine">
+      <view class='label_name'>经纪人</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="text" bindinput="agent" class="input" placeholder="请输入经纪人名字"></input>
+      </view>
+    </view>   
+    <view class="bottomLine">
+      <view class='label_name'>联系方式</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="telephone" class="input" placeholder="请输入联系方式"></input>
+      </view>
+    </view> -->
+    <view class="bottomLine">
+      <view class='label_name'>预计收益</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="digit" maxlength="11" bindinput="profit" class="input" placeholder="请输入预计收益金额"></input>
+      </view>
+    </view>    
+     <view>    
+      <view style='margin:20rpx;'>
+        <textarea placeholder-class="input-holder" bindinput="remark" class="input" placeholder="备注"></textarea>
+      </view>
+    </view>    
+  </view>
+  <view class='btnBox'>
+    <button type="primary" class='regBtn float-right' size="{{primarySize}}" hover-class="other-button-hover " bindtap='saveDormitory'>提交</button>
+  </view>
+</view>
